@@ -21,17 +21,20 @@ var cadKm = 0.30;
 
 bottoneCalcolo.addEventListener("click",
   function(){
+
     var valoreUtente = nomeUtente.value;
     var valoreKm = kmDaPercorrere.value;
     var valoreEta = etaUtente.value;
-    var prova = valoreUtente + valoreKm + valoreEta;
     var prezzoBase = cadKm * valoreKm;
     var prezzoTotale;
-    if (etaUtente <= 17){
-      prezzoTotale = prezzoBase * 0.2;
-    } else if (etaUtente >= 65){
-      prezzoTotale = prezzoBase * 0.4;
+    if (valoreEta <= 17){
+      prezzoTotale = prezzoBase - (prezzoBase * 0.2);
+    } else if (valoreEta >= 65){
+      prezzoTotale = prezzoBase - (prezzoBase * 0.4);
+    } else {
+      prezzoTotale = prezzoBase;
     }
+    console.log("Prezzo totale : " + prezzoTotale);
     document.getElementById('prezzotot').innerHTML = prezzoTotale;
     console.log("prezzo base del biglietto" + prezzoBase);
     document.getElementById('passeggero').innerHTML = "nome utente" + valoreUtente;
