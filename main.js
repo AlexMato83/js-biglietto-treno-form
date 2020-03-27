@@ -38,13 +38,15 @@ bottoneCalcolo.addEventListener("click",
     if (valoreEta <= 17){
       categoriaBigl = "Riduzione Minorenni";
     } else if (valoreEta >= 65){
-      categoriaBigl = "Riduzione Over 65";    
+      categoriaBigl = "Riduzione Over 65";
     } else {
       categoriaBigl = "Biglietto Standard";
     }
+    var numCarrozza = Math.floor(Math.random() * 25);
+    document.getElementById('carrozza').innerHTML = "il numero carrozza è " + numCarrozza;
     document.getElementById('categoria').innerHTML = "la categoria a cui appartieni è " + categoriaBigl;
     console.log("Prezzo totale : " + prezzoTotale);
-    document.getElementById('prezzotot').innerHTML = prezzoTotale;
+    document.getElementById('prezzotot').innerHTML = "prezzo totale del biglietto " + prezzoTotale;
     console.log("prezzo base del biglietto" + prezzoBase);
     document.getElementById('passeggero').innerHTML = "nome utente" + valoreUtente;
 
