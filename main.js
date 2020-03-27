@@ -16,7 +16,8 @@ var cadKm = 0.30;
 
 //valore base del biglietto esente sconti
 
-
+//creazione del var per la categoria del biglietto
+var categoriaBigl;
 
 
 bottoneCalcolo.addEventListener("click",
@@ -34,6 +35,14 @@ bottoneCalcolo.addEventListener("click",
     } else {
       prezzoTotale = prezzoBase;
     }
+    if (valoreEta <= 17){
+      categoriaBigl = "Riduzione Minorenni";
+    } else if (valoreEta >= 65){
+      categoriaBigl = "Riduzione Over 65";    
+    } else {
+      categoriaBigl = "Biglietto Standard";
+    }
+    document.getElementById('categoria').innerHTML = "la categoria a cui appartieni è " + categoriaBigl;
     console.log("Prezzo totale : " + prezzoTotale);
     document.getElementById('prezzotot').innerHTML = prezzoTotale;
     console.log("prezzo base del biglietto" + prezzoBase);
