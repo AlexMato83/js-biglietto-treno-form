@@ -10,6 +10,8 @@ var etaUtente = document.getElementById('eta');
 
 //collegare il bottone calcolo
 var bottoneCalcolo =document.getElementById('calcolo');
+//collegare il bottone annullare
+var bottoneAnnulla = document.getElementById('annulla');
 
 //valore del chilometro ,CAD
 var cadKm = 0.30;
@@ -19,7 +21,7 @@ var cadKm = 0.30;
 //creazione del var per la categoria del biglietto
 var categoriaBigl;
 
-
+//inizio bottone CALCOLO
 bottoneCalcolo.addEventListener("click",
   function(){
 
@@ -43,6 +45,8 @@ bottoneCalcolo.addEventListener("click",
       categoriaBigl = "Biglietto Standard";
     }
     var numCarrozza = Math.floor(Math.random() * 25);
+    var numCodice = Math.floor(Math.random() * 25849);
+    document.getElementById('codice').innerHTML = "il codice è " + numCodice;
     document.getElementById('carrozza').innerHTML = "il numero carrozza è " + numCarrozza;
     document.getElementById('categoria').innerHTML = "la categoria a cui appartieni è " + categoriaBigl;
     console.log("Prezzo totale : " + prezzoTotale);
@@ -54,6 +58,14 @@ bottoneCalcolo.addEventListener("click",
   }
 
 )
+bottoneAnnulla.addEventListener("click",
+  function(){
+    nomeUtente.value = " ";
+    kmDaPercorrere.value = " ";
+    etaUtente.value = " ";
+  }
+)
+
 
 
 
