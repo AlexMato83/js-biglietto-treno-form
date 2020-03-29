@@ -6,17 +6,71 @@
     <title></title>
   </head>
   <body>
+
+    <section id="sez1">
+      <div id="testo" class="margini">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+      </div>
+
+      <div id="dati" class="margini">
+        <div id="dati-sopra">
+          <div class="dati-interni">
+            <h3>Inserire nome e cognome</h3>
+            <input id="nome"type="text" name="" value="">
+          </div>
+          <div class="dati-interni">
+            <h3>Inserire km da percorrere</h3>
+            <input id="km"type="number" name="" value="">
+          </div>
+          <div class="dati-interni">
+            <h3>Inserire età</h3>
+            <input id="eta"type="number" name="" value="">
+          </div>
+        </div>
+        <div id="dati-sotto">
+          <button id="calcolo"type="button" name="">CALCOLA</button>
+          <button id="annulla"type="button" name="" value="">ANNULLA</button>
+        </div>
+      </div>
+    </section>
+    <section id="sez2">
+      <div id="sez2-testo" class="margini">
+       <h1>ANTEPRIMA BIGLIETTO</h1>
+      </div>
+      <div id="biglietto" class="margini">
+         <div class="sez2-dati">
+           <h2>Nome Passeggero</h2>
+           <h3 id="passeggero"></h3>
+         </div>
+         <div class="sez2-dati">
+           <h2>Categoria Biglietto</h2>
+           <h3 id="categoria"></h3>
+         </div>
+         <div class="sez2-dati">
+           <h2>Numero Carrozza</h2>
+           <h3 id="carrozza"></h3>
+         </div>
+         <div class="sez2-dati">
+           <h2>Codice Biglietto</h2>
+           <h3 id="codice"></h3>
+         </div>
+         <div class="sez2-dati">
+           <h2>Costo Biglietto</h2>
+           <h3 id="prezzotot"></h3>
+         </div>
+      </div>
+    </section>
+
+
+
     <!-- parte sopra -->
-    <input id="nome"type="text" name="" value="">
-    <input id="km"type="number" name="" value="">
-    <input id="eta"type="number" name="" value="">
-    <button id="calcolo"type="button" name="button">CALCOLA</button>
-    <input id="annulla"type="reset" name="" value="reset">
+
+
     <!-- parte sotto -->
-    <h1 id="passeggero"></h1>
+
     <h1 id="carrozza"></h1>
-    <h1 id="codice"></h1>
-    <h1 id="prezzotot"></h1>
+    <h1 ></h1>
+    <h1 ></h1>
     <h1 id="categoria"></h1>
     <script type="text/javascript"src="main.js">
 

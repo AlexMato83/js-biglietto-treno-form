@@ -21,6 +21,9 @@ var cadKm = 0.30;
 //creazione del var per la categoria del biglietto
 var categoriaBigl;
 
+//creazione var per disabilitare sezione BIGLIETTO
+var biglietto = document.getElementById('sez2');
+
 //inizio bottone CALCOLO
 bottoneCalcolo.addEventListener("click",
   function(){
@@ -28,6 +31,7 @@ bottoneCalcolo.addEventListener("click",
     var valoreUtente = nomeUtente.value;
     var valoreKm = kmDaPercorrere.value;
     var valoreEta = etaUtente.value;
+    biglietto.style.display = "block";
     var prezzoBase = cadKm * valoreKm;
     var prezzoTotale;
     if (valoreEta <= 17){
@@ -44,25 +48,25 @@ bottoneCalcolo.addEventListener("click",
     } else {
       categoriaBigl = "Biglietto Standard";
     }
+
     var numCarrozza = Math.floor(Math.random() * 25);
     var numCodice = Math.floor(Math.random() * 25849);
-    document.getElementById('codice').innerHTML = "il codice è " + numCodice;
-    document.getElementById('carrozza').innerHTML = "il numero carrozza è " + numCarrozza;
-    document.getElementById('categoria').innerHTML = "la categoria a cui appartieni è " + categoriaBigl;
+    document.getElementById('codice').innerHTML = numCodice;
+    document.getElementById('carrozza').innerHTML = numCarrozza;
+    document.getElementById('categoria').innerHTML = categoriaBigl;
     console.log("Prezzo totale : " + prezzoTotale);
-    document.getElementById('prezzotot').innerHTML = "prezzo totale del biglietto " + prezzoTotale;
+    document.getElementById('prezzotot').innerHTML = prezzoTotale;
     console.log("prezzo base del biglietto" + prezzoBase);
-    document.getElementById('passeggero').innerHTML = "nome utente" + valoreUtente;
-
-
+    document.getElementById('passeggero').innerHTML = valoreUtente;
   }
-
 )
+
 bottoneAnnulla.addEventListener("click",
   function(){
     nomeUtente.value = " ";
     kmDaPercorrere.value = " ";
     etaUtente.value = " ";
+    biglietto.style.display = "none";
   }
 )
 
