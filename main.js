@@ -48,16 +48,17 @@ bottoneCalcolo.addEventListener("click",
     } else {
       categoriaBigl = "Biglietto Standard";
     }
-
+    prezzoTotale.toFixed(2);
     var numCarrozza = Math.floor(Math.random() * 25);
     var numCodice = Math.floor(Math.random() * 25849);
     document.getElementById('codice').innerHTML = numCodice;
     document.getElementById('carrozza').innerHTML = numCarrozza;
     document.getElementById('categoria').innerHTML = categoriaBigl;
     console.log("Prezzo totale : " + prezzoTotale);
-    document.getElementById('prezzotot').innerHTML = prezzoTotale;
+    document.getElementById('prezzotot').innerHTML = prezzoTotale + " Euro";
     console.log("prezzo base del biglietto" + prezzoBase);
     document.getElementById('passeggero').innerHTML = valoreUtente;
+
   }
 )
 
